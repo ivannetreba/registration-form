@@ -65,5 +65,30 @@
       alert("Спасибо, " + name + ", за подписку на рассылку!");
     }
   </script>
+  <script>
+  function subscribe() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    
+    var namePattern = /[a-zA-Zа-яА-ЯёЁ\s-]{2,20}/;
+    var emailPattern = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
+
+    if (!namePattern.test(name)) {
+      alert("Пожалуйста, введите имя от 2 до 20 символов");
+      return;
+    }
+
+    if (!emailPattern.test(email)) {
+      alert("Пожалуйста, введите корректный email");
+      return;
+    }
+
+    // Здесь можно добавить логику отправки данных на сервер для подписки на рассылку
+
+    // Пример варианта вывода сообщения об успешной подписке
+    alert("Спасибо, " + name + ", за подписку на рассылку!");
+  }
+</script>
+
 </body>
 </html>
