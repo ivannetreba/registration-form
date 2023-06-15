@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Подписка на рассылку</title>
+  <style>
+    .subscribe-form {
+      width: 300px;
+      margin: 0 auto;
+    }
+    .subscribe-form input[type="text"],
+    .subscribe-form input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .subscribe-form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="subscribe-form">
+    <h2>Подписка на рассылку</h2>
+    <input type="text" id="name" placeholder="Введите ваше имя (2-20 символов)" required pattern="[a-zA-Zа-яА-ЯёЁ\s-]{2,20}">
+    <input type="email" id="email" placeholder="Введите ваш email (5-30 символов)" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+    <button onclick="subscribe()">Подписаться</button>
+  </div>
+
+  <script>
+    function subscribe() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      // Здесь можно добавить логику отправки данных на сервер для подписки на рассылку
+
+      // Пример варианта вывода сообщения об успешной подписке
+      alert("Спасибо, " + name + ", за подписку на рассылку!");
+    }
+  </script>
+</body>
+</html>
